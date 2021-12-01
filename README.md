@@ -1,24 +1,33 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# <チーム畑>
 
-Things you may want to cover:
+## サイト概要
+<就農されている方や農業に興味のある方が情報や知識を共有するサイト、また農業日誌用にも>
 
-* Ruby version
+### サイトテーマ
+<農業知識・情報のシェア>
 
-* System dependencies
+### テーマを選んだ理由
+<...>
 
-* Configuration
+### ターゲットユーザ
+<農業関係者・興味のある方・趣味でされている方>
 
-* Database creation
+### 主な利用シーン
+<個人用の農業日誌に利用はもちろんの事、地域別で就農されている農家さんの知識をアウトプットからインプットまで>
 
-* Database initialization
+## 設計書
+<...>
 
-* How to run the test suite
+## チャレンジ要素一覧
+<https://docs.google.com/spreadsheets/d/1E4Quehglf9PxM1XTE-ft2X5-hJ5dmoJhsI-UJlgzVmY/edit#gid=0>
 
-* Services (job queues, cache servers, search engines, etc.)
+## 開発環境
+- OS：Linux(CentOS)
+- 言語：HTML,CSS,JavaScript,Ruby,SQL
+- フレームワーク：Ruby on Rails
+- JSライブラリ：jQuery
+- IDE：Cloud9
 
-* Deployment instructions
-
-* ...
+## 使用素材
