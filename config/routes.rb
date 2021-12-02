@@ -7,5 +7,5 @@ Rails.application.routes.draw do
     resource :favorites,only: [:create, :destroy]
     resources :blog_comments,only: [:create, :destroy]
   end
-  get 'home/about' => 'homes#about'
+  
 end

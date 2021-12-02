@@ -16,3 +16,16 @@
 @import "bootstrap";
 @import 'font-awesome-sprockets';
 @import 'font-awesome';
+
+div.text-card-container {
+  padding-left: 9px;
+  padding-right: 9px;
+  margin-bottom: 50px;
+}
+
+div.content-card {
+  height: 350px;
+  max-width: 360px;
+  margin: 0 auto;
+}
+

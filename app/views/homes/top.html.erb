@@ -1,12 +1,32 @@
-<div class="container">
+<!DOCTYPE html>
+<html>
+   <head>
+    <title>Team hatake</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body class="top">
+<div class="main-visual">
+  <div class="main-visual-content">
+    <h2 class="main-visual-title">
+      このサイトは農業に関わる全ての人に利用していただけるサイトです。
+    </h2>
+    <p class="main-visual-text">
+      農業日誌や技術ブログ、趣味で行っている園芸などの雑日記など<br>
+      多種多様なブログ投稿サイトです。<br>
+      ぜひ、あなたの知識や感想などを投稿し、農業に関わる人達と繋がりましょう。
+    </p>
   <div class="btn-wrapper col-10 mx-auto">
     <div class="row">
-      <%= link_to 'Log in', new_user_session_path, class: "btn btn-info btn-sm btn-block md-3 sign_in" %>
+      <%= link_to 'ログイン', new_user_session_path, class: "btn btn-light btn-sm btn-block md-3 sign_in" %>
     </div>
     <div class="row">
-      <%= link_to 'Sign up', new_user_registration_path, class: "btn btn-success btn-sm btn-block sign_up" %>
+      <%= link_to '新規登録', new_user_registration_path, class: "btn btn-success btn-sm btn-block sign_up" %>
     </div>
     </div>
   </div>
-  </div>
-</div>
+  </body>
+  </html>
