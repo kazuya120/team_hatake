@@ -6,9 +6,6 @@
     <% end %>
     </td>
     <td><%= link_to blog.title, blog_path(blog), class: "blog_#{blog.id}" %></td>
-    <td id="favorites_btn_<%= blog.id %>">
-      <%= render 'favorites/favorite-btn', blog: blog %>
-    </td>
     <td>コメント数：<%= blog.blog_comments.count %></td>
 </tr>
 <% end %>

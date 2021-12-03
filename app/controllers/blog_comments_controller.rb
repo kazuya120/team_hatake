@@ -7,12 +7,15 @@ class BlogCommentsController < ApplicationController
     @blog_comment.blog_id = @blog.id
     @blog_comment.user_id = current_user.id
     @blog_comments = @blog.blog_comments
-    @blog_comment.save
+    unless @blog_comment.save
+      render 'error'
+    end
   end
 
   def destroy
     @blog = Blog.find(params[:blog_id])
-    BlogComment.find_by(id: params[:id], blog_id: params[:blog_id]).destroy
+    blog_comment = @blog.blog_comments.find(params[:id])
+    blog_comment.destroy
   end
 
   private

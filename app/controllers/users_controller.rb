@@ -8,7 +8,7 @@ class UsersController < ApplicationController
   end
 
   def index
-    @users = User.all
+    @users = User.all.page(params[:page]).per(10)
     @blog = Blog.new
   end
 
@@ -18,7 +18,7 @@ class UsersController < ApplicationController
 
   def update
     if @user.update(user_params)
-      redirect_to user_path(@user), notice: "You have updated user successfuly."
+      redirect_to user_path(@user), notice: "ユーザー編集をしました."
     else
       render "edit"
     end

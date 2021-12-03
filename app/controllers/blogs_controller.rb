@@ -11,7 +11,7 @@ class BlogsController < ApplicationController
 
   def index
     @total_blogs = Blog.all
-    @blogs = Blog.all
+    @blogs = Blog.all.page(params[:page]).per(8)
     @blog = Blog.new
   end
 
@@ -19,7 +19,7 @@ class BlogsController < ApplicationController
     @blog = Blog.new(blog_params)
     @blog.user_id = current_user.id
     if @blog.save
-      redirect_to blog_path(@blog), notice: "You have created blog successfully."
+      redirect_to blog_path(@blog), notice: "ブログの投稿をしました."
     else
       @blogs = Blog.all
       render 'index'
@@ -38,7 +38,7 @@ class BlogsController < ApplicationController
   def update
     @blog = Blog.find(params[:id])
     if @blog.update(blog_params)
-      redirect_to blog_path(@blog), notice: "You have updated blog successfully."
+      redirect_to blog_path(@blog), notice: "ブログのアップデートをしました."
     else
       render "edit"
     end

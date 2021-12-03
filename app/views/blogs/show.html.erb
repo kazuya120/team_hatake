@@ -2,7 +2,7 @@
   <div class="row post-wrap">
     <div class="col-md-8">
       <div class="card-left">
-        <%= attachment_image_tag @blog, :image, size: "120×120", fallback: "no-image-icon.jpg" %>
+        <%= attachment_image_tag @blog, :image, :fill, 700, 500, fallback: "no-image-icon.jpg" %>
       </div>
     </div>
     <div class="col-md-4">
@@ -10,7 +10,7 @@
         <div class="card-right-comment">
           <div class="card-right-name">
             <%= link_to user_path(@blog.user) do %>
-            <%= attachment_image_tag(@blog.user, :profile_image, :fill, 100, 100, fallback: "no-image-icon.jpg") %><br>
+            <%= attachment_image_tag(@blog.user, :profile_image, :fill, 100, 80, fallback: "no-image-icon.jpg") %><br>
             <strong><%= @blog.user.name %> | <%= @blog.user.prefecture_code %></strong>
             <% end %>
           </div>
@@ -29,6 +29,17 @@
         </div>
       </div>
     </div>
+    <div class="col-mt-2">
+      <h4>コメント</h4>
+      <table class="blog_comments">
+       <%= render 'blog_comments/index', blog: @blog %>
+      </table>
+       <%= form_with model:[@blog,@blog_comment] do |f| %>
+        <%= f.text_area :comment, size:"90x5" %>
+        <%= f.submit 'コメントする', class: "btn btn-primary"%>
+       <% end %>
+    </div>
   </div>
 </div>
+
 
