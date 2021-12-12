@@ -8,7 +8,8 @@
             <span><%= link_to blog.title, blog_path(blog), class: "blog_#{blog.id}" %>
             <td class="favorite-btn"><%= render "favorites/favorite-btn", blog: blog %></td>
           <p>
-            <span><i class="fas fa-user"><%= blog.user.name %></i></span>
+            <span><i class="fas fa-user"><%= blog.user.name %></i></span> |
+            <span><i class="fas fa-carrot"><%= blog.user.prefecture_code %></i></span>
           </p>
           <% end %>
     </div>

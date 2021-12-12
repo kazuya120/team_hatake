@@ -1,0 +1,11 @@
+.container.px-5.px-sm-0
+  .row
+    .col-md-3
+      h2 ユーザー
+      = render 'info', user: current_user
+      h2.mt-3 ブログを投稿
+      = render 'blogs/form', blog: @blog
+    .col-md-8.offset-md-1
+      h2 投稿者一覧
+      = render 'index', users: @users
+  = paginate(@users)
