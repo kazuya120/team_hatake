@@ -16,6 +16,9 @@
           </div>
           <div class="m-2">
             <strong><%= link_to @blog.title, blog_path(@blog) %></strong>
+            <div id="favorite_btn_<%= @blog.id %>">
+              <%= render "favorites/favorite-btn", blog: @blog %>
+            </div>
           </div>
           <div class="comment-post-id">
             <div class="m-2">

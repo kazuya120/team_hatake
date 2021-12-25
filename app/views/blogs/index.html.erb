@@ -1,18 +1,17 @@
 <div class="card-list-container py-5">
   <% @blogs.each do |blog| %>
   <div class="card h-100 w-50 mx-auto mt-4 shadow-lg">
-     <%= link_to blog_path(blog.id) do %>
-     <%= attachment_image_tag blog, :image, :fill, 400, 300, class:"card-img-top"; %>
-    <div class="card-body">
-          <p class="card-title">
-            <span><%= link_to blog.title, blog_path(blog), class: "blog_#{blog.id}" %>
-            <td class="favorite-btn"><%= render "favorites/favorite-btn", blog: blog %></td>
-          <p>
-            <span><i class="fas fa-user"><%= blog.user.name %></i></span> |
-            <span><i class="fas fa-carrot"><%= blog.user.prefecture_code %></i></span>
-          </p>
-          <% end %>
-    </div>
+    <%= link_to blog_path(blog.id) do %>
+      <%= attachment_image_tag blog, :image, :fill, 400, 300, class:"card-img-top"; %>
+      <div class="card-body">
+        <p class="card-title">
+          <span><%= link_to blog.title, blog_path(blog), class: "blog_#{blog.id}" %>
+        <p>
+          <span><i class="fas fa-user"><%= blog.user.name %></i></span><br>
+          <span><i class="fas fa-carrot"><%= blog.user.prefecture_code %></i></span>
+        </p>
+      </div>
+    <% end %>
   </div>
   <% end %>
  <%= paginate(@blogs) %>
