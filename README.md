@@ -17,8 +17,9 @@
 ### 主な利用シーン
 個人用の農業日誌に利用はもちろんの事、地域別で就農されている農家さんの知識をアウトプットからインプットまで
 
-## 設計書
-<...>
+## ER図
+https://app.diagrams.net/#G1vGc-koPQz6i8jxjo5ugr5nL8-G5_nAoy
+
 
 ## チャレンジ要素一覧
 https://docs.google.com/spreadsheets/d/1r7bGZYehv27WtWCRU-YhsRVX6YOTj5l91dpKKgs8Pyw/edit?usp=sharing
